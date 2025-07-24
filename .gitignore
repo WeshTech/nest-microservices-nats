@@ -1,0 +1,49 @@
+# ============ Core Ignore Rules ============ #
+# Compiled output
+**/dist
+**/node_modules
+**/build
+
+# Logs
+**/logs
+*.log
+*-debug.log*
+*-error.log*
+
+# OS metadata
+.DS_Store
+
+# Test/coverage
+**/coverage
+**/.nyc_output
+
+# IDEs and editors
+**/.idea
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+!**/.vscode/extensions.json
+
+# Environment files
+**/.env
+**/.env.*.local
+**/.env.local
+
+# Temp files
+**/.temp
+**/.tmp
+
+# Runtime data
+**/pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ========== Service-Specific Additions ========== #
+# (Add any unique paths here if needed)
+# Example: 
+# payments-microservice/secret-config.json
