@@ -6,6 +6,6 @@ import { CreatePaymentDto } from './dtos/CreatePayment.dto';
 export class PaymentsController {
   @EventPattern('createPayment')
   createPayment(@Payload() createPaymentDto: CreatePaymentDto) {
-    console.log(createPaymentDto);
+    console.log('Payment creation event received:', createPaymentDto);
   }
 }
