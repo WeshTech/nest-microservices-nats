@@ -8,18 +8,24 @@ services:
     command: npm run start:dev
     environment:
       - ports=3000
+    depends_on:
+      - nats
 
   users_microservice:
     build: ./users-microservice
     volumes:
       - ./users-microservice/src:/usr/src/app/src
     command: npm run start:dev
+    depends_on:
+      - nats
 
   payments_microservice:
-    build: ./users-microservice
+    build: ./payments-microservice
     volumes:
       - ./payments-microservice/src:/usr/src/app/src
     command: npm run start:dev
+    depends_on:
+      - nats
 
   nats:
     image: nats
